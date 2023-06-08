@@ -11,24 +11,27 @@ User.destroy_all
 Review.destroy_all
 Restaurant.destroy_all
 
-# Seed data for Users
+"seeding..."
+
 User.create([
-  { username: 'adrian_s', password_digest: 'encrypted_password', name: 'Adrian Sedano' },
-  { username: 'john_s', password_digest: 'encrypted_password', name: 'John Smith' },
-  { username: 'mike_j', password_digest: 'encrypted_password', name: 'Mike Johnson' }
+  { id: 1, username: 'adrian_s', password: 'encrypted_password', password_confirmation: 'encrypted_password', name: 'Adrian Sedano' },
+  { id: 2, username: 'john_s', password: 'encrypted_password', password_confirmation: 'encrypted_password', name: 'Jane Smith' },
+  { id: 3, username: 'mike_j', password: 'encrypted_password', password_confirmation: 'encrypted_password', name: 'Mike Johnson' }
 ])
 
 # Seed data for Restaurants
 Restaurant.create([
-  { name: 'Pizza Palace', location: '123 Main St, Cityville', image: 'https://images.pexels.com/photos/708587/pexels-photo-708587.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
-  { name: 'Burger Bar', location: '456 Elm St, Townsville', image: 'https://images.pexels.com/photos/59943/pexels-photo-59943.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
-  { name: 'Sushi Spot', location: '789 Oak St, Villagetown', image: 'https://images.pexels.com/photos/1028425/pexels-photo-1028425.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' }
+  { id: 1, name: 'Pizza Palace', location: '123 Main St, Cityville', image: 'https://images.pexels.com/photos/708587/pexels-photo-708587.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+  { id: 2, name: 'Burger Bar', location: '456 Elm St, Townsville', image: 'https://images.pexels.com/photos/59943/pexels-photo-59943.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+  { id: 3, name: 'Sushi Spot', location: '789 Oak St, Villagetown', image: 'https://images.pexels.com/photos/1028425/pexels-photo-1028425.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' }
 ])
 
 # Seed data for Reviews
 Review.create([
-  { user_id: 1, restaurant_id: 1, description: 'Delicious pizza!', rating: 5 },
-  { user_id: 1, restaurant_id: 2, description: 'Great burgers!', rating: 4 },
-  { user_id: 2, restaurant_id: 1, description: 'Amazing pizza place!', rating: 5 },
-  { user_id: 3, restaurant_id: 3, description: 'Fantastic sushi!', rating: 4 }
+  { id: 1, user_id: 1, restaurant_id: 1, description: 'Delicious pizza!', rating: 5 },
+  { id: 2, user_id: 1, restaurant_id: 2, description: 'Great burgers!', rating: 4 },
+  { id: 3, user_id: 2, restaurant_id: 1, description: 'Amazing pizza place!', rating: 5 },
+  { id: 4, user_id: 3, restaurant_id: 3, description: 'Fantastic sushi!', rating: 4 }
 ])
+
+"seeding complete!"
